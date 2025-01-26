@@ -1,6 +1,7 @@
 import clsx from "clsx"
 import { Montserrat } from "next/font/google"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 
 import { RootHeader } from "@/widgets/RootHeader"
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <RootHeader />
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
