@@ -1,5 +1,6 @@
 import clsx from "clsx"
 import { Montserrat } from "next/font/google"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { RootHeader } from "@/widgets/RootHeader"
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={clsx("bg-gray-200", montserrat.className)}>
         <RootHeader />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   )
