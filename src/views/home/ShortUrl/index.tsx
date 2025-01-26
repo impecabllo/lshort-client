@@ -35,7 +35,12 @@ export const ShortUrl: FC = () => {
   }
 
   return (
-    <div className="container lg:flex lg:items-center lg:mt-[-64px] lg:h-[100vh] md:max-w-2xl w-full pt-20 lg:pt-0">
+    <div className="container lg:flex lg:items-center lg:mt-[-64px] lg:h-[100vh] md:max-w-2xl w-full pt-10 sm:pt-20 lg:pt-0">
+      <div className="sm:hidden text-center mb-8 text-2xl font-bold">
+        <span className="underline">Бесплатный</span>
+        <br />
+        сокращатель ссылок
+      </div>
       <Form {...form}>
         <form
           className="flex w-full sm:items-center gap-x-2 gap-y-8 flex-col sm:flex-row"
@@ -59,7 +64,7 @@ export const ShortUrl: FC = () => {
             )}
           />
 
-          <Button type="submit" className="h-[56px]">
+          <Button type="submit" className="h-[56px] text-lg bg-slate-700">
             Сократить
           </Button>
         </form>

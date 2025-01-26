@@ -16,7 +16,9 @@ export const RootHeader: FC = () => {
           </Link>
         </div>
 
-        <div className="hidden sm:block">Бесплатный сокращатель ссылок</div>
+        <div className="hidden sm:block">
+          <span className="underline">Бесплатный</span> сокращатель ссылок
+        </div>
       </div>
     </div>
   )
