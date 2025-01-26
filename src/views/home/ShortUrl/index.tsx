@@ -30,8 +30,8 @@ export const ShortUrl: FC = () => {
     },
   })
 
-  const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    console.log(data)
+  const onSubmit = () => {
+    // data: z.infer<typeof FormSchema>
   }
 
   return (
