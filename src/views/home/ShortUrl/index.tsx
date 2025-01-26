@@ -64,7 +64,7 @@ export const ShortUrl: FC = () => {
             )}
           />
 
-          <Button type="submit" className="h-[56px] text-lg bg-slate-700">
+          <Button type="submit" className="h-[56px] text-lg">
             Сократить
           </Button>
         </form>
