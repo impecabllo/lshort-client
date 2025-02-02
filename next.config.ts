@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  async rewrites() {
+    return {
+      beforeFiles: [],
+      afterFiles: [],
+      fallback: [
+        {
+          source: "/:code*",
+          destination: `http://localhost:3001/link/:code*`,
+        },
+      ],
+    }
+  },
+}
 
-export default nextConfig;
+export default nextConfig
