@@ -1,10 +1,15 @@
+"use server"
+
+import { headers } from "next/headers"
+
 import config from "@/config"
-import { getBaseUrl } from "@/lib/helper"
 
 import type { CreateShortUrlData } from "../types"
+import { getBaseHost } from "@/lib/helper"
 
 export async function createShortUrl(formData: CreateShortUrlData) {
-  const url = `${getBaseUrl()}${config.paths.shortUrl}`
+  const host = (await headers()).get("host")
+  const url = `${getBaseHost(host)}${config.paths.shortUrl}`
 
   const payload = {
     originalUrl: formData.link,

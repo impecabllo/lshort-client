@@ -4,3 +4,7 @@ export const urlRegex =
 export const getBaseUrl = () => {
   return process.env.NODE_ENV === "development" ? "http://localhost:3001" : "https://api.lshort.ru"
 }
+
+export const getBaseHost = (host: string | null) => {
+  return process.env.NODE_ENV === "development" ? `http://${host}` : `https://${host}`
+}

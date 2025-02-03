@@ -1,13 +1,10 @@
-import config from "@/config"
-import { getBaseUrl } from "@/lib/helper"
 import { UrlClicks } from "@/views/counter/code"
+import { getClicksData } from "./actions"
 
 export default async function Page({ params }: { params: Promise<{ code: string }> }) {
   const code = (await params).code
 
-  const url = `${getBaseUrl()}${config.paths.linkClicks(code)}`
-  const data = await fetch(url)
-  const { clicks, shortUrl } = await data.json()
+  const { clicks, shortUrl } = await getClicksData(code)
 
   return <UrlClicks clicks={clicks} shortUrl={shortUrl} />
 }

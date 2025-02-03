@@ -26,13 +26,13 @@ export const ShortUrl: FC = () => {
       link: data.link,
     })
 
-    setRequestLoading(false)
-
     setResultData({
       shortUrl,
       originalUrl,
       urlCode,
     })
+
+    setRequestLoading(false)
   }
 
   const handleReset = () => {
