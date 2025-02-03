@@ -1,4 +1,5 @@
 import { UrlClicks } from "@/views/counter/code"
+
 import { getClicksData } from "./actions"
 
 export default async function Page({ params }: { params: Promise<{ code: string }> }) {
