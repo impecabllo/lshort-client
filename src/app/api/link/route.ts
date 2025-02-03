@@ -1,7 +1,5 @@
 import { NextRequest } from "next/server"
 
-import { getBaseUrl } from "@/lib/helper"
-
 export async function POST(request: NextRequest) {
   const { originalUrl } = await request.json()
 
@@ -9,7 +7,7 @@ export async function POST(request: NextRequest) {
     originalUrl,
   }
 
-  const url = `${getBaseUrl()}/link`
+  const url = `https://api.lshort.ru/link`
   const res = await fetch(url, {
     headers: {
       "Content-Type": "application/json",
