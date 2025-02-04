@@ -32,10 +32,10 @@ export const ShortUrlResult: FC<Props> = ({ shortUrl, originalUrl, urlCode, onRe
         </Button>
       </div>
 
-      <div className="mt-[24px] md:mt-0 md:absolute md:top-[80px] grid gap-y-6 w-full">
+      <div className="mt-[24px] md:mt-0 md:absolute md:top-[80px] grid gap-y-6 w-full overflow-hidden">
         <p>
           Длинная ссылка:{" "}
-          <a className="underline" href={originalUrl} target="_blank">
+          <a className="underline break-all" href={originalUrl} target="_blank">
             {originalUrl}
           </a>
         </p>
