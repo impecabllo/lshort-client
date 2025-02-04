@@ -1,4 +1,4 @@
-import { ShortUrl } from "@/views/home/ShortUrl"
+import { ShortUrl } from "@/views/home/ShortLink"
 
 export default function Home() {
   return (
