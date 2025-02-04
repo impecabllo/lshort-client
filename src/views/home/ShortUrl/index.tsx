@@ -4,6 +4,7 @@ import { z } from "zod"
 
 import { FormSchema, ShortUrlForm } from "./components/Form"
 import { ShortUrlResult } from "./components/Result"
+import { createShortUrl } from "./components/actions"
 
 import { useState, type FC } from "react"
 import type { ResultData } from "./types"
@@ -21,7 +22,9 @@ export const ShortUrl: FC = () => {
   const handleSubmit = async (data: z.infer<typeof FormSchema>) => {
     setRequestLoading(true)
 
-    const { shortUrl, originalUrl, urlCode } = { shortUrl: "", originalUrl: "", urlCode: data.link }
+    const { shortUrl, originalUrl, urlCode } = await createShortUrl({
+      link: data.link,
+    })
 
     setResultData({
       shortUrl,

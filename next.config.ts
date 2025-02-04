@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
           destination:
             process.env.NODE_ENV === "development"
               ? "http://localhost:3001/link/:code*"
-              : "https://lshort.ru/link/:code*",
+              : "https://api.lshort.ru/link/:code*",
         },
       ],
     }
