@@ -1,11 +1,10 @@
-import { headers } from "next/headers"
+"use server"
 
 import config from "@/config"
-import { getBaseHost } from "@/lib/helper"
+import { getBaseUrl } from "@/lib/helper"
 
 export async function getClicksData(code: string) {
-  const host = (await headers()).get("host")
-  const url = `${getBaseHost(host)}${config.paths.linkClicks(code)}`
+  const url = `${getBaseUrl()}${config.paths.linkClicks(code)}`
 
   const response = await fetch(url)
 
