@@ -18,6 +18,7 @@ export async function createShortUrl(formData: CreateShortUrlData) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
+    credentials: "include",
   })
 
   return response.json()
