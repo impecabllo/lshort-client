@@ -1,4 +1,4 @@
-"use client"
+"use server"
 
 import config from "@/config"
 import { getBaseUrl } from "@/lib/helper"
