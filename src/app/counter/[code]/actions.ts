@@ -1,7 +1,7 @@
 import { headers } from "next/headers"
 
-import { getBaseHost } from "@/lib/helper"
 import config from "@/config"
+import { getBaseHost } from "@/lib/helper"
 
 export async function getClicksData(code: string) {
   const host = (await headers()).get("host")
