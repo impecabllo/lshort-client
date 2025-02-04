@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
       afterFiles: [],
       fallback: [
         {
+          source: "/api/:path*",
+          destination: "https://api.lshort.ru/:path*",
+        },
+        {
           source: "/:code*",
           destination:
             process.env.NODE_ENV === "development"
