@@ -1,9 +1,5 @@
-import { ShortUrl } from "@/views/home/ShortUrl"
+import { ShortUrl } from "@/pages/home"
 
 export default function Home() {
-  return (
-    <div className="md:min-h-[calc(100vh-64px)]">
-      <ShortUrl />
-    </div>
-  )
+  return <ShortUrl />
 }

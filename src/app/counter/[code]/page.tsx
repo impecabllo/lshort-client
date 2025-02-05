@@ -1,11 +1,7 @@
-import { UrlClicks } from "@/views/counter/code"
-
-import { getClicksData } from "./actions"
+import { ClicksInfo } from "@/pages/info"
 
 export default async function Page({ params }: { params: Promise<{ code: string }> }) {
   const code = (await params).code
 
-  const { clicks, shortUrl } = await getClicksData(code)
-
-  return <UrlClicks clicks={clicks} shortUrl={shortUrl} />
+  return <ClicksInfo code={code} />
 }
