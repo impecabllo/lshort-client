@@ -1,4 +1,4 @@
-import { ClicksInfo } from "@/pages/info"
+import { ClicksInfo } from "@/views/info"
 
 export default async function Page({ params }: { params: Promise<{ code: string }> }) {
   const code = (await params).code
